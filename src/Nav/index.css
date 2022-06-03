@@ -1,0 +1,46 @@
+video{
+
+
+width: 120%;
+
+
+}
+
+div.nav{
+
+  background-color: black;  
+  
+  
+}
+
+
+section{
+    
+    color: aliceblue;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    
+    vertical-align:middle
+    
+}
+
+button{
+  
+    color: aliceblue;
+    position: relative;
+    left: 62%;
+    background: linear-gradient(#0A2A8F, #0F39BD);
+    border-radius: 15%;
+    text-transform: uppercase;
+    padding: 8px;
+
+}
+
+button:hover{
+  
+    color: aliceblue;
+    background: linear-gradient(#1266c7, #5e7feb);
+    padding: 10px;
+
+}

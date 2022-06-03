@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    padding: 0 55px; 
+    
+  }
+  
+  .item {
+    display: inline-block;
+    background: green; 
+    flex: 0 0 19.7%;
+    color: aliceblue;
+    text-align: center;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+  }
+
+  .container:hover .item {
+    transform: translateX(-25%);
+ }
+ .item:hover ~ .item {
+    transform: translateX(25%);
+ }
+
+ .item:hover {
+    transform: scale(1.5) !important;
+  }
+
+  img{
+
+    width: 50%;
+  }
