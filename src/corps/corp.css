@@ -1,12 +1,24 @@
-.container {
+.TitreCaroucel{
+  color: aliceblue;
+  font-weight: bold;
+
+
+}
+
+
+.caroucel {
     display: flex;
     padding: 0 55px; 
+    background-image: linear-gradient(to right,#000,transparent);
+    position:fixed;
+  bottom:0;
+  
     
   }
   
   .item {
     display: inline-block;
-    background: green; 
+     /* background: green;   */
     flex: 0 0 19.7%;
     color: aliceblue;
     text-align: center;
@@ -14,7 +26,7 @@
     transition: transform 300ms ease 100ms;
   }
 
-  .container:hover .item {
+  .caroucel:hover .item {
     transform: translateX(-25%);
  }
  .item:hover ~ .item {
@@ -28,4 +40,25 @@
   img{
 
     width: 50%;
+  }
+
+  .left {
+    background: black;
+    width: 30%;
+    position: relative;
+  }
+
+  .left:before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right,#000,transparent);
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 275px;
+  }
+  
+  .right {
+    
+    width: 70%;
   }
