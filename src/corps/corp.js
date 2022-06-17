@@ -40,9 +40,9 @@ const Corps = () =>{
 
     const prevSlide = () => {
            
-        console.log("le slide index "+slideIndex)
-        
-        if(slideIndex !== 0){
+        console.log("en arriere !")
+
+        if(slideIndex !== 5){
             setData(dataSlide)
             setSlideIndex(slideIndex - 1)
             setAfficheFin(afficheFin -1)
@@ -58,8 +58,9 @@ const Corps = () =>{
     // renvoie une map de dataSlide , obj et index , a chaque fois que la map sort une image il augmente la varibale index .
     // on appel dans <img le tableaux dataSlide[] avec la variable index a l'interieur , ainsi on appel dataslide[0] puis 1 , puis 2 et ect....
     return (
+        
         <div className="caroucel">
-            <div class="left" onClick={prevSlide}> {"<"} </div>
+            <button class="left" onClick={prevSlide}> {"<"} </button>
             {dataSlide.map((obj, index) => {
 
                 if( index<afficheFin && index>=afficheDebut ){ 
@@ -72,7 +73,8 @@ const Corps = () =>{
                     }       
                
             })}
-            <div class="right" onClick={nextSlide} >{">"}</div>
+            <button  class="right" onClick={nextSlide} >{">"}</button>
+            
         </div>
     )
 

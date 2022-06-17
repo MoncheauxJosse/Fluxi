@@ -16,7 +16,7 @@ const Navigation = () =>{
             <section>Ma liste</section>  
 
 
-            <button onClick=" " >Connexion</button>
+            <button class="bouton" onClick=" " >Connexion</button>
         </div>
 
         

@@ -45,10 +45,12 @@
   .left {
     background: black;
     color:aliceblue;
-    width: 275px;
-    
-
+    right: 60px;
     position: relative;
+    font-size: xx-large;
+
+    
+    
   }
 
   /*.left:before {
@@ -62,6 +64,9 @@
   }*/
   
   .right {
+    background:transparent;
     color:aliceblue;
-    width: 70%;
+    font-size: xx-large;
+    border: none; 
+
   }
