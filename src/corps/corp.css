@@ -44,11 +44,14 @@
 
   .left {
     background: black;
-    width: 30%;
+    color:aliceblue;
+    width: 275px;
+    
+
     position: relative;
   }
 
-  .left:before {
+  /*.left:before {
     content: '';
     position: absolute;
     background-image: linear-gradient(to right,#000,transparent);
@@ -56,9 +59,9 @@
     bottom: 0;
     left: 100%;
     width: 275px;
-  }
+  }*/
   
   .right {
-    
+    color:aliceblue;
     width: 70%;
   }
