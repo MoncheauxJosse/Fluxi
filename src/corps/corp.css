@@ -8,10 +8,11 @@
 
 .caroucel {
     display: flex;
-    padding: 0 55px; 
+    padding: 0 100px; 
     background-image: linear-gradient(to right,#000,transparent);
     position:fixed;
-  bottom:0;
+    bottom:0;
+
   
     
   }
@@ -21,9 +22,14 @@
      /* background: green;   */
     flex: 0 0 19.7%;
     color: aliceblue;
+    
+    
+      
     text-align: center;
     margin: 0 2px;
     transition: transform 300ms ease 100ms;
+    z-index: 4;
+    
   }
 
   .caroucel:hover .item {
@@ -37,17 +43,19 @@
     transform: scale(1.5) !important;
   }
 
-  img{
-
-    width: 50%;
-  }
+  img {
+    max-width : 50%;
+    height : auto;
+    }
 
   .left {
     background: black;
     color:aliceblue;
     right: 60px;
     position: relative;
-    font-size: xx-large;
+    font-size: 400%;
+    /*transform: scale(2, 0.5)*/
+    z-index: 4;
 
     
     
@@ -66,7 +74,9 @@
   .right {
     background:transparent;
     color:aliceblue;
-    font-size: xx-large;
-    border: none; 
+    font-size: 400%;
+    border: none;
+   /* transform: scale(2, 0.5) deforme le bloc bouton*/
+   z-index: 5;
 
   }
