@@ -12,6 +12,7 @@
     background-image: linear-gradient(to right,#000,transparent);
     position:fixed;
     bottom:0;
+    max-height: 180px;
 
   
     
@@ -46,6 +47,7 @@
   }
 
   img {
+    max-height: max-content;
     height: 100%;
     width: 100%;
     max-width : 50%;
@@ -83,3 +85,30 @@
    z-index: 5;
 
   }
+
+  body{
+    background-image: url(../imageIndex/BackgroundFluxi.png);
+    background-size:cover;  
+
+  }
+  /*body:has(div):has(div):has(.caroucel):has(.item:hover){
+
+   
+    background-image: url(./imageCaroucel/1917.jpg);
+    background-size:cover;
+   
+
+  }*/
+
+  
+  /*.item:hover body{
+    background-image: url(./imageCaroucel/1917.jpg);
+    background-size:cover;
+  }*/
+
+  /*body >.item:hover{
+
+    background-image: url(./imageCaroucel/1917.jpg);
+    background-size:cover;
+
+  }*/
