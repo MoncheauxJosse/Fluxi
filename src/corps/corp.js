@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState,useEffect} from 'react'
 import {Data} from './dataSlide'
 import  './corp.css'
 
@@ -54,6 +54,24 @@ const Corps = () =>{
         }
     }
 
+    // je vais devoir ajouter un id a chaque image et( recuper l id de l image !)
+    const detect =(e)=>{
+
+      
+       const i= e.currentTarget.id
+        
+       
+       console.log(i)
+       /* if ($('.item').css('transform') == 'scale(1.5)'){
+
+            
+
+            
+        }*/
+
+    }
+
+    
 
     // renvoie une map de dataSlide , obj et index , a chaque fois que la map sort une image il augmente la varibale index .
     // on appel dans <img le tableaux dataSlide[] avec la variable index a l'interieur , ainsi on appel dataslide[0] puis 1 , puis 2 et ect....
@@ -66,8 +84,8 @@ const Corps = () =>{
                 if( index<afficheFin && index>=afficheDebut ){ 
                     
                     return (
-                    <div class="item">
-                        <img src={dataSlide[index]} alt={"img"+(index)}/>
+                    <div id={index} class="item" onMouseEnter={detect}>
+                        <img src={dataSlide[index]} alt={"img"+(index)}  />
                     </div>
                              )
                     }       
