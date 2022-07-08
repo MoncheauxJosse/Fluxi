@@ -62,13 +62,9 @@ const Corps = () =>{
         
        
        console.log(i)
-       /* if ($('.item').css('transform') == 'scale(1.5)'){
-
-            
-
-            
-        }*/
-
+     
+       var objRef = document.body;
+        var objchange=  objRef.style.backgroundImage= `url(${dataSlide[i]})`; 
     }
 
     

@@ -7,21 +7,12 @@ import background from "./imageIndex/BackgroundFluxi.png";
 
 function App() {
 
-  const containerStyle = {
-    backgroundImage: `url(${background})`,
-      backgroundPosition: 'center',
-      with:'100%',
-      height: '800px',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
 
-      
-    }
 
     
 
     return (
-      <div style={containerStyle}>
+      <div>
        <Navigation/>
         <Corps/>
       </div>
