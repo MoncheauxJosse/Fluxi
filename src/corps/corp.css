@@ -33,6 +33,7 @@
     transition: transform 300ms ease 100ms;
     z-index: 4;
     
+    
   }
 
   .caroucel:hover .item {

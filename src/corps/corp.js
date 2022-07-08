@@ -54,15 +54,16 @@ const Corps = () =>{
         }
     }
 
+    // je vais devoir ajouter un id a chaque image et( recuper l id de l image !)
     const detect =(e)=>{
 
       
-       const i= e.currentTarget.id
-        
-     
-       var objRef = document.body;
-        var objchange=  objRef.style.backgroundImage= `url(${dataSlide[i]})`; 
-    }
+        const i= e.currentTarget.id
+         
+      
+        var objRef = document.body;
+         var objchange=  objRef.style.backgroundImage= `url(${dataSlide[i].back})`; 
+     }
 
     
 
@@ -78,7 +79,7 @@ const Corps = () =>{
                     
                     return (
                     <div id={index} class="item" onMouseEnter={detect}>
-                        <img src={dataSlide[index]} alt={"img"+(index)}  />
+                        <img src={dataSlide[index].item} alt={"img"+(index)}  />
                     </div>
                              )
                     }       
