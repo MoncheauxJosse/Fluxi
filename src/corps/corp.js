@@ -54,14 +54,11 @@ const Corps = () =>{
         }
     }
 
-    // je vais devoir ajouter un id a chaque image et( recuper l id de l image !)
     const detect =(e)=>{
 
       
        const i= e.currentTarget.id
         
-       
-       console.log(i)
      
        var objRef = document.body;
         var objchange=  objRef.style.backgroundImage= `url(${dataSlide[i]})`; 

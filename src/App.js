@@ -7,12 +7,11 @@ import background from "./imageIndex/BackgroundFluxi.png";
 
 function App() {
 
-
-
+ 
     
 
     return (
-      <div>
+      <div >
        <Navigation/>
         <Corps/>
       </div>
