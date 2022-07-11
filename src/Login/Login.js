@@ -1,13 +1,9 @@
-import "./SingUp.css"
 import { Link } from "react-router-dom"
 
-const SignUp = () => {
+const Login = () => {
     return <div className="SignUpDiv">
-        <h2>Sign Up</h2>
+        <h2>Sign In</h2>
         <form>
-            <div className="DivForm">
-                <input className="InputForm" type="text" name="username" placeholder="First Name" />
-            </div>
             <div className="DivForm">
                 <input className="InputForm" type="text" name="email" placeholder="Email Address" />
             </div>
@@ -20,9 +16,9 @@ const SignUp = () => {
                 </button>
             </div>
         </form>
-        <p>Already a user ?</p>
-        <Link to="/login">Sign in now.</Link>
+        <p>New to Netflix ? ?</p>
+        <Link to="/signup">Sign un now.</Link>
     </div>
 }
 
-export default SignUp
+export default Login

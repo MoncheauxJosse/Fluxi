@@ -6,6 +6,7 @@ import Navigation from './Nav/index.js';
 import Corps from './corps/corp.js';
 import background from "./imageIndex/BackgroundFluxi.png";
 import SignUp from "./SignUp/SingUp.js"
+import Login from "./Login/Login.js"
 
 function App() {
 
@@ -17,8 +18,9 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Routes>
-          <Route path="accueil" element={<Corps/>}/>
-          <Route path="" element={<SignUp/>}/>
+          <Route path="/accueil" element={<Corps/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
     </div>
