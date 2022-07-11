@@ -1,0 +1,54 @@
+.SignUpDiv {
+    height: 340px;
+    width: 33%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 4px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+h2 {
+    color: white;
+}
+
+.DivForm {
+    text-align: center;
+}
+
+.InputForm {
+    width: 66%;
+    height: 30px;
+    margin: 6px;
+    /* background: #333; */
+    background: rgba(51, 51, 51, .75);
+    border-radius: 4px;
+}
+
+.InputForm::placeholder {
+    color: white;
+}
+
+.Button {
+    height: 30px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #e5091475;
+    text-align: center;
+    width: 66%;
+    color: white;
+    margin: 6px;
+
+}
+
+p{
+    color: #737373;
+    
+}
+
+a{
+    color: white;
+    
+}
