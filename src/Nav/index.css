@@ -25,7 +25,7 @@ section{
     
 }
 
-/* .bouton{
+.bouton{
   
     color: aliceblue;
     position: relative;
@@ -37,10 +37,10 @@ section{
 
 }
 
-button:hover{
+.buton:hover{
   
     color: aliceblue;
     background: linear-gradient(#1266c7, #5e7feb);
     padding: 10px;
 
-} */
+}

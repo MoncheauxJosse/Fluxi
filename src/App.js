@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-//import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
 import Navigation from './Nav/index.js';
 import Corps from './corps/corp.js';
 import background from "./imageIndex/BackgroundFluxi.png";

@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import logo from './imageNav/FluxiVid.mp4'
+import { Link } from 'react-router-dom'
 
 const Navigation = () =>{
 
@@ -16,7 +17,8 @@ const Navigation = () =>{
             <section>Ma liste</section>  
 
 
-            <button class="bouton" onClick=" " >Connexion</button>
+            {/* <button class="bouton" onClick=" " >Connexion</button> */}
+            <Link to="login" class="bouton">Connection</Link>
         </div>
 
         
