@@ -1,24 +1,35 @@
 import { Link } from "react-router-dom"
+import React from 'react'
+
+import { useForm } from "react-hook-form";
+
+
 
 const Login = () => {
+
+
+    const { handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
+
+
+
+
     return <div className="SignUpDiv">
         <h2>Sign In</h2>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className="DivForm">
-                <input className="InputForm" type="text" name="email" placeholder="Email Address" />
+                <input className="InputForm" type="text" name="email" placeholder="Email Address"  />
             </div>
             <div className="DivForm">
                 <input className="InputForm" type="password" name="password" placeholder="Password" />
             </div>
             <div className="DivForm">
-                {/* <button className="Button" type="submit">
-                    Sign In
-                </button> */}
-                <Link to="/accueil" className="Button">Sign In</Link>
+             <button className="Button" type="submit"> Sign In</button> 
+                {/* <Link to="/accueil" className="Button">Sign In</Link> */}
             </div>
         </form>
-        <p>New to Netflix ? ?</p>
-        <Link to="/signup">Sign un now.</Link>
+        <p>New to Fluxi ?</p>
+        <Link to="/signup">créer un compte</Link>
     </div>
 }
 
