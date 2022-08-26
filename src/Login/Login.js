@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 const Login = () => {
 
 
-    const { handleSubmit } = useForm();
+    const { register,handleSubmit } = useForm();
   const onSubmit = data => console.log(data);
 
 
@@ -18,10 +18,10 @@ const Login = () => {
         <h2>Sign In</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="DivForm">
-                <input className="InputForm" type="text" name="email" placeholder="Email Address"  />
+                <input className="InputForm" type="text" name="email" placeholder="Email Address" {...register("email")}/>
             </div>
             <div className="DivForm">
-                <input className="InputForm" type="password" name="password" placeholder="Password" />
+                <input className="InputForm" type="password" name="password" placeholder="Password" {...register("password")} />
             </div>
             <div className="DivForm">
              <button className="Button" type="submit"> Sign In</button> 
