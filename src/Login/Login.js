@@ -9,7 +9,7 @@ const Login = () => {
 
 
     const { register,handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = compteData => console.log(compteData);
 
 
 

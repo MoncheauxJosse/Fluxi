@@ -1,18 +1,28 @@
 import "./SingUp.css"
 import { Link } from "react-router-dom"
+import { useForm } from "react-hook-form";
+import { postConexions } from "../service/Connect.js";
+
 
 const SignUp = () => {
+
+
+
+    const { register,handleSubmit } = useForm();
+    const onSubmit = data => postConexions(data);
+
+    
     return <div className="SignUpDiv">
         <h2>Sign Up</h2>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className="DivForm">
-                <input className="InputForm" type="text" name="username" placeholder="First Name" />
+                <input className="InputForm" type="text" name="username" placeholder="First Name" {...register("username")}/>
             </div>
             <div className="DivForm">
-                <input className="InputForm" type="text" name="email" placeholder="Email Address" />
+                <input className="InputForm" type="text" name="email" placeholder="Email Address"  {...register("email")} />
             </div>
             <div className="DivForm">
-                <input className="InputForm" type="password" name="password" placeholder="Password" />
+                <input className="InputForm" type="password" name="password" placeholder="Password" {...register("password")}/>
             </div>
             <div className="DivForm">
                 <button className="Button" type="submit">
