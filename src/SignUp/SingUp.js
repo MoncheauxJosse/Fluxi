@@ -5,9 +5,14 @@ import { Hashcode } from "../service/hasheCode.js"
 
 const SignUp = () => {
 
-
-
-    const { register,handleSubmit } = useForm();
+    const { register,handleSubmit } = useForm({
+        defaultValues: {
+            username: '',
+            email: '',
+            password: '',
+            type: 'inscription',
+        }
+      });
     const onSubmit = data => Hashcode(data);
 
     

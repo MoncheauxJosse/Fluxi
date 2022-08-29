@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs'
-import { postConexions } from "../service/Connect.js";
+import { postConexions, postlogin } from "../service/Connect.js";
 export const Hashcode = async(dataConexion) =>{
 
 
@@ -7,8 +7,25 @@ export const Hashcode = async(dataConexion) =>{
         const salt = await bcrypt.genSalt()
         const hashPassword = await bcrypt.hash(dataConexion.password,salt)
 
+        console.log(dataConexion)
+        
         dataConexion.password = hashPassword
-        postConexions( dataConexion)
+
+        if(dataConexion.type == 'inscription'){
+
+          postConexions( dataConexion)
+
+          console.log("création")
+
+        }else if(dataConexion.type == 'login'){
+
+          console.log("conection")
+
+          postlogin( dataConexion)
+
+
+        }
+       
 
         return "ok"
 

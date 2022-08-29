@@ -8,7 +8,14 @@ import { useForm } from "react-hook-form";
 const Login = () => {
 
 
-    const { register,handleSubmit } = useForm();
+    const { register,handleSubmit } = useForm({
+        defaultValues: {
+            username: '',
+            email: '',
+            password: '',
+            type: 'login',
+        }
+      });
   const onSubmit = compteData => console.log(compteData);
 
 

@@ -1,13 +1,22 @@
-//import axios from "axios"
+import axios from "axios"
 
 
-const annonces = []
+
 
 export const postConexions = (dataIsncription) => {
-    //let token = lol;
+    
    
-    console.log(dataIsncription)
+    console.log("connection a l inscription")
 
 
-    return /*axios.get('http://localhost/annonces')*/
+    return axios.post('http://localhost:7008/api/signup',{dataIsncription})
+}
+
+export const postlogin = (dataLogin) => {
+
+   
+    console.log("connection au login")
+
+
+    return axios.post('http://localhost:7008/api/login',{dataLogin})
 }
