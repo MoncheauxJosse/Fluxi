@@ -1,15 +1,14 @@
 import "./SingUp.css"
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form";
-import { postConexions } from "../service/Connect.js";
-
+import { Hashcode } from "../service/hasheCode.js"
 
 const SignUp = () => {
 
 
 
     const { register,handleSubmit } = useForm();
-    const onSubmit = data => postConexions(data);
+    const onSubmit = data => Hashcode(data);
 
     
     return <div className="SignUpDiv">

@@ -1,16 +1,12 @@
 //import axios from "axios"
-import { Hashcode } from "./hasheCode.js"
+
 
 const annonces = []
 
-export const postConexions = (data) => {
-
-
-
-    let hasrecupe = Hashcode(data.password)
+export const postConexions = (dataIsncription) => {
     //let token = lol;
-    data.password =  hasrecupe 
-    console.log(data)
+   
+    console.log(dataIsncription)
 
 
     return /*axios.get('http://localhost/annonces')*/

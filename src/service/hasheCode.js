@@ -1,15 +1,16 @@
 import bcrypt from 'bcryptjs'
-
-export const Hashcode = async(password) =>{
+import { postConexions } from "../service/Connect.js";
+export const Hashcode = async(dataConexion) =>{
 
 
     try{
         const salt = await bcrypt.genSalt()
-        const hashPassword = await bcrypt.hash (password,salt)
+        const hashPassword = await bcrypt.hash(dataConexion.password,salt)
 
-        console.log(hashPassword);
+        dataConexion.password = hashPassword
+        postConexions( dataConexion)
 
-        return hashPassword
+        return "ok"
 
     }catch{
 
