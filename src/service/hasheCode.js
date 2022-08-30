@@ -7,7 +7,7 @@ export const Hashcode = async(dataConexion) =>{
         const salt = await bcrypt.genSalt()
         const hashPassword = await bcrypt.hash(dataConexion.password,salt)
 
-        console.log(dataConexion)
+        console.log("passe dans bcrypt")
         
         dataConexion.password = hashPassword
 
@@ -15,11 +15,11 @@ export const Hashcode = async(dataConexion) =>{
 
           postConexions( dataConexion)
 
-          console.log("création")
+          console.log("par dans signup axios")
 
         }else if(dataConexion.type == 'login'){
 
-          console.log("conection")
+          console.log("par dans login axios")
 
           postlogin( dataConexion)
 
