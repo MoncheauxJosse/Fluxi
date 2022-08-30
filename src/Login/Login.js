@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import React from 'react'
-
+import { postConexions } from "../service/Connect";
 import { useForm } from "react-hook-form";
 
 
@@ -16,7 +16,7 @@ const Login = () => {
             type: 'login',
         }
       });
-  const onSubmit = compteData => console.log(compteData);
+  const onSubmit = compteData => postConexions(compteData);
 
 
 

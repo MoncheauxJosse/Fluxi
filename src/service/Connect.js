@@ -9,6 +9,7 @@ export const postConexions = async (dataIsncription) => {
     console.log("entre dans la methode axios Postconexion")
 
     console.log("Verification de l objet")
+
     console.log(dataIsncription)
 
     //const rep = await axios.post('http://localhost:7008/api/signup',{essai : 1})

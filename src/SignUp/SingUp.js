@@ -1,7 +1,8 @@
 import "./SingUp.css"
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form";
-import { Hashcode } from "../service/hasheCode.js"
+//import { Hashcode } from "../service/hasheCode.js"
+import { postConexions } from "../service/Connect";
 
 const SignUp = () => {
 
@@ -10,10 +11,11 @@ const SignUp = () => {
             username: '',
             email: '',
             password: '',
-            type: 'inscription',
+            //type: 'inscription',
         }
       });
-    const onSubmit = data => Hashcode(data);
+    //const onSubmit = data => Hashcode(data);
+    const onSubmit = data => postConexions(data);
 
     
     return <div className="SignUpDiv">

@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs'
+/*import bcrypt from 'bcryptjs'
 import { postConexions, postlogin } from "../service/Connect.js";
 export const Hashcode = async(dataConexion) =>{
 
