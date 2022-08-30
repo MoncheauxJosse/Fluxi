@@ -11,20 +11,11 @@ export const Hashcode = async(dataConexion) =>{
         
         dataConexion.password = hashPassword
 
-        if(dataConexion.type == 'inscription'){
-
           postConexions( dataConexion)
-
-          console.log("par dans signup axios")
-
-        }else if(dataConexion.type == 'login'){
 
           console.log("par dans login axios")
 
           postlogin( dataConexion)
-
-
-        }
        
 
         return "ok"
@@ -40,7 +31,7 @@ export const Hashcode = async(dataConexion) =>{
 }
 
 
-/*export const Compare = async (mdp,mdpDb)=>{
+export const Compare = async (mdp,mdpDb)=>{
 
     
     try{
