@@ -13,10 +13,10 @@ export const postConexions = async (dataIsncription) => {
   //const rep = await axios.post('http://localhost:7008/api/signup',{essai : 1})
 
    
-    return await axios.post('http://localhost:9090/api/signup',{dataIsncription})
+    return await axios.post('http://localhost:5008/api/signup',{...dataIsncription})
 }
 
-export const postlogin = async (dataLogin) => {
+export const getlogin = async (dataLogin) => {
 
    
     console.log("entre dans la methode axios postLogin")
@@ -24,5 +24,5 @@ export const postlogin = async (dataLogin) => {
     console.log(dataLogin)
 
 
-    return await axios.post('http://localhost:9090/api/login',{dataLogin})
+    return await axios.post('http://localhost:5008/api/login',{...dataLogin})
 }

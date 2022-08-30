@@ -11,11 +11,10 @@ const SignUp = () => {
             username: '',
             email: '',
             password: '',
-            type: 'inscription',
         }
       });
-    const onSubmit = data => Hashcode(data);
-    //const onSubmit = data => postConexions(data);
+    //const onSubmit = data => Hashcode(data);
+    const onSubmit = data => postConexions(data);
 
     
     return <div className="SignUpDiv">
