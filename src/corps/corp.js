@@ -8,36 +8,43 @@ import  './corp.css'
 const Corps = () =>{
 
     // import la fonction Data et l ajoute dans un state nomé dataSLide
-    const [dataSlide, setData] = useState({Data: []}); 
+    const [data, setData] = useState({hist: []}); 
     const [slideIndex, setSlideIndex] = useState(5)
     const [afficheFin, setAfficheFin] = useState(5)
     const [afficheDebut, setAfficheDebut] = useState(0)
 
+    const lienBase = `http://localhost:7008/`
 
-    useEffect(async () => {
-        const result = getCarroucel()
+    useEffect(() => {
+
+        async function fetchData() {
+        const result = await getCarroucel()
     
-        setData(result.dataSlide);
-      });
+        //console.log(result.data)
+        setData({hist:result.data});
+        };
+
+        fetchData();
+      },[]);
     
 
     const nextSlide = () => {
 
         console.log("sa passe")
         console.log("le slide index "+slideIndex)
-        if(slideIndex !== dataSlide.length){
+        if(slideIndex !== data.length){
 
-            console.log("longuer tableaux "+dataSlide.length)
-            setData(dataSlide)
+            console.log("longuer tableaux "+data.length)
+            setData(data)
             setSlideIndex(slideIndex + 1)
             setAfficheFin(afficheFin +1)
             setAfficheDebut(afficheDebut +1)
 
         } 
-        else if (slideIndex === dataSlide.length){
+        else if (slideIndex === data.length){
 
             console.log("slide a la fin")
-            setData(dataSlide)
+            setData(data)
             setSlideIndex(5)
             setAfficheFin(5)
             setAfficheDebut(0)
@@ -50,16 +57,18 @@ const Corps = () =>{
         console.log("en arriere !")
 
         if(slideIndex !== 5){
-            setData(dataSlide)
+            setData(data)
             setSlideIndex(slideIndex - 1)
             setAfficheFin(afficheFin -1)
             setAfficheDebut(afficheDebut -1)
         }
         else if (slideIndex === 1){
-            setData(dataSlide)
-            setSlideIndex(dataSlide.length)
+            setData(data)
+            setSlideIndex(data.length)
         }
     }
+
+    
 
     // je vais devoir ajouter un id a chaque image et( recuper l id de l image !)
     const detect =(e)=>{
@@ -69,24 +78,31 @@ const Corps = () =>{
          
       
         var objRef = document.body;
-         var objchange=  objRef.style.backgroundImage= `url(${dataSlide[i].back})`; 
+         var objchange=  objRef.style.backgroundImage= `url(${lienBase+data.hist[i].images.urlImageBack})`; 
      }
 
     
 
-    // renvoie une map de dataSlide , obj et index , a chaque fois que la map sort une image il augmente la varibale index .
-    // on appel dans <img le tableaux dataSlide[] avec la variable index a l'interieur , ainsi on appel dataslide[0] puis 1 , puis 2 et ect....
+    
+    
+     console.log(data)
+
+
+    // renvoie une map de data, obj et index , a chaque fois que la map sort une image il augmente la varibale index .
+    // on appel dans <img le tableaux data[] avec la variable index a l'interieur , ainsi on appel dataslide[0] puis 1 , puis 2 et ect....
     return (
         
         <div className="caroucel">
             <button class="left" onClick={prevSlide}> {"<"} </button>
-            {dataSlide.Data.map((obj, index) => {
+
+            
+            {data.hist?.map((obj, index) => {
 
                 if( index<afficheFin && index>=afficheDebut ){ 
-                    
+                    {console.log(lienBase+data.hist[index].images.urlImage)}
                     return (
                     <div id={index} class="item" onMouseEnter={detect}>
-                        <img src={dataSlide[index].images.urlImage} alt={"img"+(index)}  /> 
+                        <img src={lienBase+data.hist[index].images.urlImage} alt={"img"+(index)}  /> 
                     </div>
                              )
                     }       
