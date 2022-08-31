@@ -1,4 +1,4 @@
-//import image du caroucel
+/*import image du caroucel
 import item from './imageCaroucel/trilogie_noob.jpg'
 import item2 from './imageCaroucel/titanic.jpg'
 import item3 from './imageCaroucel/joker.jpg'
@@ -16,7 +16,7 @@ import back5 from './bacgroundImage/kaamelott1634226347031-format16by9.png'
 import back6 from './bacgroundImage/mortal2020moviereview.jpg'
 import back7 from './bacgroundImage/1917Back.jpg'
 import back8 from './bacgroundImage/topGunBack.png'
-
+import { getCarroucel } from '../service/Connect'
 
 
 export const Data = () =>{
@@ -24,7 +24,15 @@ export const Data = () =>{
 //Ensuite le const prend 2 valeur , l ettat actuel (data) et une methode qui affichera le changement d'etat ( SetData)
 // ainsi si nous voulons modifier la valeur de data , il faudrat appeler le setData
 
- const data =[
+const Data 
+ getCarroucel().then(res => {
+  const persons = res.data;
+  this.setState({ persons });
+})
+
+
+
+ /*const data =[
   {
   item :item ,
   back :back
@@ -62,4 +70,4 @@ export const Data = () =>{
 
     
      return data
-}
+}*/

@@ -1,17 +1,24 @@
 import React, {useState,useEffect} from 'react'
-import {Data} from './dataSlide'
+//import {Data} from './dataSlide'
+import { getCarroucel } from '../service/Connect';
+
 import  './corp.css'
 
 
 const Corps = () =>{
 
     // import la fonction Data et l ajoute dans un state nomé dataSLide
-    const [dataSlide, setData] = useState(Data); 
+    const [dataSlide, setData] = useState({Data: []}); 
     const [slideIndex, setSlideIndex] = useState(5)
     const [afficheFin, setAfficheFin] = useState(5)
     const [afficheDebut, setAfficheDebut] = useState(0)
 
 
+    useEffect(async () => {
+        const result = getCarroucel()
+    
+        setData(result.dataSlide);
+      });
     
 
     const nextSlide = () => {
@@ -73,13 +80,13 @@ const Corps = () =>{
         
         <div className="caroucel">
             <button class="left" onClick={prevSlide}> {"<"} </button>
-            {dataSlide.map((obj, index) => {
+            {dataSlide.Data.map((obj, index) => {
 
                 if( index<afficheFin && index>=afficheDebut ){ 
                     
                     return (
                     <div id={index} class="item" onMouseEnter={detect}>
-                        <img src={dataSlide[index].item} alt={"img"+(index)}  />
+                        <img src={dataSlide[index].images.urlImage} alt={"img"+(index)}  /> 
                     </div>
                              )
                     }       

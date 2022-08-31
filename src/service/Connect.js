@@ -13,7 +13,7 @@ export const postConexions = async (dataIsncription) => {
   //const rep = await axios.post('http://localhost:7008/api/signup',{essai : 1})
 
    
-    return await axios.post('http://localhost:5008/api/signup',{...dataIsncription})
+    return await axios.post('http://localhost:7008/api/signup',{...dataIsncription})
 }
 
 export const getlogin = async (dataLogin) => {
@@ -24,5 +24,11 @@ export const getlogin = async (dataLogin) => {
     console.log(dataLogin)
 
 
-    return await axios.post('http://localhost:5008/api/login',{...dataLogin})
+    return await axios.post('http://localhost:7008/api/login',{...dataLogin})
+}
+
+export const getCarroucel = async () => {
+
+
+    return await axios.get('http://localhost:7008/api/film')
 }
