@@ -2,14 +2,26 @@
   
 }
 
-/*.back{
+.ButtonFaQ{
 
-    background-image: url(./imageIndex/BackgroundFluxi.png);
-    width: 100%;
-    height: 1000px;
-    background-size: cover;
+    background: linear-gradient(#0A2A8F, #0F39BD);
+    border-radius: 3px;
+    color: #fff;
 
-}*/
+}
+
+.inputFaq{
+
+
+    
+    text-align: center;
+    vertical-align: middle;
+    
+   
+  }
+
+
+
 
 
 

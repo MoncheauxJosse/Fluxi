@@ -2,7 +2,7 @@
     height: 340px;
     width: 33%;
     margin: auto;
-    background-color: rgba(0, 0, 0, .75);
+    /*background-color: rgba(0, 0, 0, .75);*/
     border-radius: 4px;
     /* display: flex;
     flex-direction: column; */
@@ -21,7 +21,7 @@ h2 {
     height: 30px;
     margin: 6px;
     /* background: #333; */
-    background: rgba(51, 51, 51, .75);
+    /*background: rgba(51, 51, 51, .75);*/
     border-radius: 4px;
 }
 
@@ -35,7 +35,7 @@ h2 {
     border-radius: 4px;
     font-size: 12px;
     font-weight: 700;
-    background: #e5091475;
+    background: linear-gradient(#0A2A8F, #0F39BD);
     text-align: center;
     width: 66%;
     color: white;

@@ -11,10 +11,10 @@ const Navigation = () =>{
 
         <div class="nav">
             <section class="video"><video src={logo} autoplay="autoplay" muted="muted"  id=""/></section>
-            <section>Acceuil</section>     
+            {/*<section>Acceuil</section>     
             <section>Séries</section>  
             <section>Films</section>  
-            <section>Ma liste</section>  
+    <section>Ma liste</section>  */}
 
 
             {/* <button class="bouton" onClick=" " >Connexion</button> */}

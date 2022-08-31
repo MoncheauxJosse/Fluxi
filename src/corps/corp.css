@@ -89,7 +89,8 @@
 
   body{
     background-image: url(../imageIndex/BackgroundFluxi.png);
-    background-size:cover;  
+    background-size:cover;
+      
 
   }
   /*body:has(div):has(div):has(.caroucel):has(.item:hover){
