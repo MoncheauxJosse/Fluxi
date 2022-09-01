@@ -80,6 +80,8 @@ const Corps = () =>{
       
         var objRef = document.body;
          var objchange=  objRef.style.backgroundImage= `url(${lienBase+data.hist[i].images.urlImageBack})`; 
+
+         console.log(objchange)
      }
 
     
