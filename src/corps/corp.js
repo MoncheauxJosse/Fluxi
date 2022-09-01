@@ -1,6 +1,8 @@
 import React, {useState,useEffect} from 'react'
 //import {Data} from './dataSlide'
 import { getCarroucel } from '../service/Connect';
+import Modal from "./Modal";
+import useModal from './useModal';
 
 
 
@@ -14,7 +16,7 @@ const Corps = () =>{
     const [slideIndex, setSlideIndex] = useState(5)
     const [afficheFin, setAfficheFin] = useState(5)
     const [afficheDebut, setAfficheDebut] = useState(0)
-    //const {isShowing, toggle} = useModal();
+    const {isShowing, toggle} = useModal();
 
     const lienBase = `http://localhost:7008/`
 
@@ -87,6 +89,8 @@ const Corps = () =>{
          console.log(objchange)
      }
 
+     
+
     
 
     
@@ -99,6 +103,10 @@ const Corps = () =>{
     return (
         
         <div className="caroucel">
+           <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
             <button class="left" onClick={prevSlide}> {"<"} </button>
 
             
@@ -107,9 +115,10 @@ const Corps = () =>{
                 if( index<afficheFin && index>=afficheDebut ){ 
                     {console.log(lienBase+data.hist[index].urlImage)}
                     return (
-                    <div id={index} class="item" onMouseEnter={detect}>
+                    <div id={index} class="item" onMouseEnter={detect} onClick={toggle}>
                         <img src={lienBase+data.hist[index].urlImage} alt={"img"+(index)} /> 
                         
+     
                     </div>
                              )
                     }       

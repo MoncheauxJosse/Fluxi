@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import Navigation from '../Nav/index.js';
 import './Accueil.css';
+import { Link, useNavigate} from "react-router-dom"
 
 
 const Accueil = () =>{
 
+  const navigate = useNavigate();
     const { register,handleSubmit } = useForm({
       defaultValues: {
           email: '',
@@ -12,8 +14,7 @@ const Accueil = () =>{
     });
 
 
-    const onSubmit = data => data;
-
+    const onSubmit = () =>{navigate('/signup')}
 
 
 
@@ -28,9 +29,9 @@ const Accueil = () =>{
 
         <input className="InputForm" type="text" name="email" placeholder="Email Address" {...register("email")}/>
 
-         <button className="ButtonFaQ" type="submit">
-                   inscription !
-                </button>
+         <button className="ButtonFaQ" type="submit">inscription !</button>
+
+         
           </div>
          </form>
          </div>
