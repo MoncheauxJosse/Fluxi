@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react'
 //import {Data} from './dataSlide'
 import { getCarroucel } from '../service/Connect';
-
+import useModal from '../UseModal';
+import Modal from '../Modal';
 import  './corp.css'
 
 
@@ -14,6 +15,12 @@ const Corps = () =>{
     const [afficheDebut, setAfficheDebut] = useState(0)
 
     const lienBase = `http://localhost:7008/`
+
+    const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
+  const {
+    isShowing: isRegistrationFormShowed,
+    toggle: toggleRegistrationForm
+  } = useModal();
 
     useEffect(() => {
 
@@ -113,7 +120,57 @@ const Corps = () =>{
             })}
             <button  class="right" onClick={nextSlide} >{">"}</button>
             
+            <div>
+
+            <button className="modal-toggle" onClick={toggleLoginForm}>
+          Login
+        </button> 
+            <Modal
+          isShowing={isLoginFormShowed}
+          hide={toggleLoginForm}
+          title="Login"
+        >
+          <video>
+            <source src="https://www.youtube.com/watch?v=Oi6tDIe-6aw"></source>
+          </video>
+        </Modal>
+            </div>
+
+            <style jsx="true">{`
+        .App {
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        button.modal-toggle,
+        input[type="submit"] {
+          background-color: turquoise;
+          cursor: pointer;
+          padding: 1rem 2rem;
+          text-transform: uppercase;
+          border: none;
+        }
+
+        button.modal-toggle:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        .form-group {
+          margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0.5rem 0.7rem;
+        }
+      `}</style>
         </div>
+
     )
 
 
