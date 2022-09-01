@@ -12,6 +12,9 @@ h2 {
     color: white;
 }
 
+h1 {
+    color: white;
+}
 .DivForm {
     text-align: center;
 }
@@ -44,7 +47,8 @@ h2 {
 }
 
 p{
-    color: #737373;
+    color: white;
+    
     
 }
 

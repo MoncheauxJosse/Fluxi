@@ -7,18 +7,19 @@
     background: linear-gradient(#0A2A8F, #0F39BD);
     border-radius: 3px;
     color: #fff;
+    height: 30px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(#0A2A8F, #0F39BD);
+    text-align: center;
+    color: white;
+    
 
 }
 
-.inputFaq{
 
-
-    
-    text-align: center;
-    vertical-align: middle;
-    
-   
-  }
 
 
 

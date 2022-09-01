@@ -32,16 +32,17 @@ const Corps = () =>{
 
         console.log("sa passe")
         console.log("le slide index "+slideIndex)
-        if(slideIndex !== data.length){
+        
+        if(slideIndex !== data.hist.length){
 
-            console.log("longuer tableaux "+data.length)
+            console.log("longuer tableaux "+data.hist.length)
             setData(data)
             setSlideIndex(slideIndex + 1)
             setAfficheFin(afficheFin +1)
             setAfficheDebut(afficheDebut +1)
 
         } 
-        else if (slideIndex === data.length){
+        else if (slideIndex === data.hist.length){
 
             console.log("slide a la fin")
             setData(data)

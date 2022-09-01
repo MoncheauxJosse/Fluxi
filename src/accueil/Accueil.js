@@ -1,14 +1,13 @@
 import { useForm } from "react-hook-form";
 import Navigation from '../Nav/index.js';
+import './Accueil.css';
 
 
 const Accueil = () =>{
 
     const { register,handleSubmit } = useForm({
       defaultValues: {
-          username: '',
           email: '',
-          password: '',
       }
     });
 
@@ -27,7 +26,7 @@ const Accueil = () =>{
 
         <div><h2>Où que vous soyez. Annulez à tout moment.</h2></div>
 
-         <input type="email"  name="email" value="" tabindex="0" autocomplete="email" maxlength="50" minlength="5" dir=""  {...register("email")}/>
+        <input className="InputForm" type="text" name="email" placeholder="Email Address" {...register("email")}/>
 
          <button className="ButtonFaQ" type="submit">
                    inscription !

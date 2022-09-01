@@ -30,9 +30,9 @@ const SignUp = () => {
                 <input className="InputForm" type="password" name="password" placeholder="Password" {...register("password")}/>
             </div>
             <div className="DivForm">
-                <button className="Button" type="submit">
-                    Sign In
-                </button>
+            <Link to="/login" className="Button" type="submit">
+                    Inscription
+                    </Link>
             </div>
         </form>
         <p>Already a user ?</p>
