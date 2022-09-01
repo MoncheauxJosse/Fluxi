@@ -88,9 +88,10 @@
   }
 
   body{
+    background-color: #000;
     background-image: url(../imageIndex/BackgroundFluxi.png);
     background-size:cover;
-      
+    background-repeat: no-repeat;
 
   }
   /*body:has(div):has(div):has(.caroucel):has(.item:hover){

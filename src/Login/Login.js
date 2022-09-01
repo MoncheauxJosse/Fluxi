@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom"
-import React from 'react'
-import { postConexions } from "../service/Connect";
+import { Link, useNavigate} from "react-router-dom"
+import React, {useState,useEffect} from 'react'
+import { postLogin } from "../service/Connect";
 import { useForm } from "react-hook-form";
 
 
 
-const Login = () => {
 
+const Login = () => {
+    const navigate = useNavigate();
 
     const { register,handleSubmit } = useForm({
         defaultValues: {
@@ -14,10 +15,37 @@ const Login = () => {
             email: '',
             password: '',
             type: 'login',
-        }
+        }, 
       });
-  const onSubmit = compteData => postConexions(compteData);
 
+      const [data, setData] = useState({token:null}); 
+
+
+
+
+  const onSubmit = compteData => {
+
+    async function fetchData() {
+    const result = await postLogin(compteData);
+
+    //console.log(result.data)
+    setData({token:result.data});
+    
+  }
+  fetchData();
+
+
+  console.log(data.token)
+
+  
+  if(data.token!=null){
+
+
+    navigate('/accueil')
+
+
+ }
+};
 
 
 
@@ -31,8 +59,8 @@ const Login = () => {
                 <input className="InputForm" type="password" name="password" placeholder="Password" {...register("password")} />
             </div>
             <div className="DivForm">
-             <Link to="/accueil" className="Button" type="submit"> Sign In</Link> 
-                {/* <Link to="/accueil" className="Button">Sign In</Link> */}
+             <button className="Button" type="submit"> Sign In</button> 
+                
             </div>
         </form>
         <p>New to Fluxi ?</p>

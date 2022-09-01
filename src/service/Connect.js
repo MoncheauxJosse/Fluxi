@@ -16,7 +16,7 @@ export const postConexions = async (dataIsncription) => {
     return await axios.post('http://localhost:7008/api/signup',{...dataIsncription})
 }
 
-export const getlogin = async (dataLogin) => {
+export const postLogin = async (dataLogin) => {
 
    
     console.log("entre dans la methode axios postLogin")
